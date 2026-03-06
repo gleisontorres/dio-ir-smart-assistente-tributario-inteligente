@@ -863,7 +863,10 @@ def processar_mensagem(mensagem: str) -> str:
         prejuizo_day_trade=prejuizo_day
     )
     
+    tem_dados_calculo = False
+    
     if dados_extraidos.get('tipo') == 'VENDA' and dados_extraidos.get('ticker') and dados_extraidos.get('quantidade') and dados_extraidos.get('preco'):
+        tem_dados_calculo = True
         preco_medio_info = st.session_state.db.obter_preco_medio(dados_extraidos['ticker'])
         preco_compra = preco_medio_info['preco_medio'] if preco_medio_info else dados_extraidos['preco'] * 0.9
         
@@ -906,7 +909,10 @@ def processar_mensagem(mensagem: str) -> str:
         if nivel_confianca != NivelConfianca.ALTA:
             contexto += "\n⚠️ AVISO: Verificar resultado - confiança não máxima."
     
-    resposta = st.session_state.gpt.enviar_mensagem(mensagem, contexto)
+    if tem_dados_calculo:
+        resposta = st.session_state.gpt.enviar_mensagem(mensagem, contexto, usar_cache=False)
+    else:
+        resposta = st.session_state.gpt.enviar_mensagem(mensagem, contexto, usar_cache=True)
     
     st.session_state.db.salvar_mensagem_conversa(
         st.session_state.sessao_id,

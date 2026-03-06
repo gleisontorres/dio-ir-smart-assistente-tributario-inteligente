@@ -320,11 +320,12 @@ Explique o resultado de forma clara e educativa para o usuário.
         """
         cache = get_cache()
         
-        if usar_cache and contexto_adicional is None:
+        if usar_cache:
             resposta_cache = cache.buscar(mensagem)
             if resposta_cache:
                 self.historico.append({"role": "user", "content": mensagem})
                 self.historico.append({"role": "assistant", "content": resposta_cache})
+                logger.info("✅ Resposta servida do cache")
                 return resposta_cache + "\n\n_📦 (resposta do cache)_"
         
         if contexto_adicional:
@@ -349,7 +350,7 @@ Explique o resultado de forma clara e educativa para o usuário.
                 resposta = response.choices[0].message.content
                 logger.debug(f"Resposta recebida do GPT ({len(resposta)} caracteres)")
                 
-                if usar_cache and contexto_adicional is None:
+                if usar_cache:
                     cache.salvar(mensagem, resposta)
                     
             except Exception as e:

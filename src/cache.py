@@ -150,12 +150,24 @@ class CacheManager:
         """
         texto_lower = texto.lower()
         
+        perguntas_especificas_usuario = [
+            "estou isento", "sou isento", "meu imposto", "minha isenção",
+            "quanto pago", "quanto devo", "meu prejuízo", "meu prejuizo",
+            "minhas vendas", "minha margem", "quanto posso vender",
+            "se eu vender", "posso vender", "minha situação", "minha situacao"
+        ]
+        
+        for termo in perguntas_especificas_usuario:
+            if termo in texto_lower:
+                return False
+        
         perguntas_genericas = [
             "o que é", "o que sao", "qual a diferença", "como funciona",
-            "me explica", "explique", "o que significa", "quando devo",
-            "preciso pagar", "sou isento", "day trade", "swing trade",
-            "isencao", "isenção", "prejuizo", "prejuízo", "compensar",
-            "darf", "aliquota", "alíquota", "imposto de renda"
+            "me explica", "explique", "o que significa", "quando vence",
+            "day trade", "swing trade", "isencao", "isenção", 
+            "prejuizo", "prejuízo", "compensar", "compensação",
+            "darf", "aliquota", "alíquota", "imposto de renda",
+            "como declarar", "como calcular"
         ]
         
         for termo in perguntas_genericas:
@@ -166,7 +178,7 @@ class CacheManager:
         tem_valor = bool(re.search(r'R\$\s*[\d.,]+', texto))
         tem_quantidade = bool(re.search(r'\b\d+\s*(ações?|acoes?)\b', texto_lower))
         
-        if tem_ticker and (tem_valor or tem_quantidade):
+        if tem_ticker or tem_valor or tem_quantidade:
             return False
         
         return True
