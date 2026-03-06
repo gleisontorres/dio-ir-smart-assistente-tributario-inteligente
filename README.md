@@ -1,4 +1,4 @@
-# 🎯 IR Smart BRA - Assistente Tributário Inteligente para Ações
+# 🎯 IR Smart - Assistente Tributário Inteligente para Ações
 
 ## 🤖 Agente Financeiro com IA Generativa - Projeto Final
 
@@ -10,7 +10,7 @@
 
 ## 📋 Contexto do Desafio
 
-Este projeto representa a evolução de assistentes virtuais no setor financeiro, transformando chatbots reativos em **agentes inteligentes e proativos**. O IR Smart BRA utiliza IA Generativa para:
+Este projeto representa a evolução de assistentes virtuais no setor financeiro, transformando chatbots reativos em **agentes inteligentes e proativos**. O IR Smart utiliza IA Generativa para:
 
 - ✅ **Antecipar necessidades** - Alertas antes de perder isenções tributárias
 - ✅ **Personalizar** - Cálculos baseados no histórico real do investidor
@@ -31,7 +31,7 @@ Isso gera:
 
 ---
 
-## 💡 A Solução: IR Smart BRA
+## 💡 A Solução: IR Smart
 
 Um **consultor tributário virtual disponível 24/7** que combina:
 
@@ -43,7 +43,7 @@ Um **consultor tributário virtual disponível 24/7** que combina:
 
 ### Diferenciais Únicos
 
-| Recurso | IR Smart BRA | Calculadoras Comuns | Apps Concorrentes |
+| Recurso | IR Smart | Calculadoras Comuns | Apps Concorrentes |
 |---------|----------|---------------------|-------------------|
 | IA Conversacional | ✅ | ❌ | Limitado |
 | Educação Embutida | ✅ | ❌ | Limitado |
@@ -181,7 +181,7 @@ O assistente estará disponível em `http://localhost:8501`
 
 ### 1. [Documentação do Agente](./docs/01-documentacao-agente.md)
 - Caso de uso completo
-- Persona "IR Smart BRA"
+- Persona "IR Smart"
 - Arquitetura técnica
 - Estratégias de anti-alucinação
 
@@ -307,7 +307,7 @@ def test_swing_trade_com_isencao():
 
 **Usuário:** "Vendi 100 ações da PETR4 por R$ 32,00. Comprei por R$ 30,00 há 2 semanas."
 
-**IR Smart BRA:**
+**IR Smart:**
 ```
 💰 Resumo da Operação:
 - Lucro: R$ 200,00
@@ -324,7 +324,7 @@ Você não precisa pagar IR! Suas vendas estão abaixo de R$ 20.000/mês.
 
 **Usuário:** "Já vendi R$ 18.000 este mês. Se eu vender mais R$ 5.000, o que acontece?"
 
-**IR Smart BRA:**
+**IR Smart:**
 ```
 ⚠️ ALERTA IMPORTANTE!
 
@@ -480,7 +480,7 @@ Para dúvidas ou sugestões sobre o projeto:
 
 ## 🎯 Conclusão
 
-O **IR Smart BRA** representa a convergência entre:
+O **IR Smart** representa a convergência entre:
 - 🤖 **IA Generativa** de última geração
 - 💼 **Conhecimento financeiro** especializado  
 - 🔐 **Segurança** de informações críticas

@@ -1,4 +1,4 @@
-# IR Smart BRA - Assistente Tributário Inteligente
+# IR Smart - Assistente Tributário Inteligente
 # Dependências Python
 
 # Interface Web

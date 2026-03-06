@@ -1,8 +1,8 @@
-# Base de Conhecimento - IR Smart BRA
+# Base de Conhecimento - IR Smart
 
 ## Dados Utilizados
 
-O IR Smart BRA utiliza uma base de conhecimento estruturada composta por regras tributárias oficiais e dados das operações do usuário:
+O IR Smart utiliza uma base de conhecimento estruturada composta por regras tributárias oficiais e dados das operações do usuário:
 
 | Arquivo/Fonte | Formato | Utilização no Agente |
 |---------------|---------|---------------------|
@@ -212,7 +212,7 @@ def inicializar_agente():
 
 #### 1. **System Prompt Estático** (regras gerais)
 ```
-Você é o IR Smart BRA, especialista em tributação de ações.
+Você é o IR Smart, especialista em tributação de ações.
 Use APENAS as regras oficiais fornecidas.
 Nunca invente alíquotas ou prazos.
 ```

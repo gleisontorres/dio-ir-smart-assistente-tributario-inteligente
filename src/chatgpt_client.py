@@ -20,10 +20,10 @@ from src.cache import get_cache
 
 load_dotenv()
 
-SYSTEM_PROMPT = """Você é o IR Smart BRA, um assistente Bradesco especializado em cálculo de Imposto de Renda sobre operações com ações no mercado brasileiro.
+SYSTEM_PROMPT = """Você é o IR Smart, um assistente Bradesco especializado em cálculo de Imposto de Renda sobre operações com ações no mercado brasileiro.
 
 IDENTIDADE:
-- Nome: IR Smart BRA
+- Nome: IR Smart
 - Instituição: Bradesco
 - Função: Assistente tributário para investidores pessoa física
 - Especialização: Cálculo de IR sobre ganho de capital em ações (mercado à vista, B3)
@@ -272,7 +272,7 @@ SITUAÇÃO ATUAL DO USUÁRIO (Data: {date.today().strftime('%d/%m/%Y')}):
             String formatada com o contexto do cálculo.
         """
         contexto = f"""
-RESULTADO DO CÁLCULO (Motor IR Smart BRA):
+RESULTADO DO CÁLCULO (Motor IR Smart):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 📊 OPERAÇÃO:
@@ -373,7 +373,7 @@ Explique o resultado de forma clara e educativa para o usuário.
         
         if any(word in mensagem_lower for word in ['olá', 'oi', 'bom dia', 'boa tarde', 'boa noite']):
             return (
-                "Olá! 👋 Sou o **IR Smart BRA**, seu assistente Bradesco para cálculo de impostos sobre ações.\n\n"
+                "Olá! 👋 Sou o **IR Smart**, seu assistente Bradesco para cálculo de impostos sobre ações.\n\n"
                 "Posso te ajudar com:\n"
                 "- 📊 Cálculo de IR sobre vendas de ações\n"
                 "- 💰 Verificação de isenção mensal (R$ 20.000)\n"
@@ -411,7 +411,7 @@ Explique o resultado de forma clara e educativa para o usuário.
         return (
             "Entendi sua pergunta! 🤔\n\n"
             "⚠️ **Nota:** A API do GPT não está configurada no momento.\n\n"
-            "Para usar todas as funcionalidades do IR Smart BRA:\n"
+            "Para usar todas as funcionalidades do IR Smart:\n"
             "1. Configure sua `OPENAI_API_KEY` no arquivo `.env`\n"
             "2. Reinicie a aplicação\n\n"
             "Enquanto isso, posso te ajudar com:\n"

@@ -18,7 +18,7 @@ Segundo pesquisa da B3, mais de 60% dos investidores pessoa física não sabem c
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-O **Agente IR Smart BRA** é um assistente inteligente que:
+O **Agente IR Smart** é um assistente inteligente que:
 
 1. **Processa automaticamente** todas as operações de compra e venda de ações do usuário
 2. **Calcula em tempo real** o imposto devido seguindo as regras da Receita Federal
@@ -58,7 +58,7 @@ O **Agente IR Smart BRA** é um assistente inteligente que:
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-**IR Smart BRA** (ou "Assistente Tributário Bradesco")
+**IR Smart** (ou "Assistente Tributário Bradesco")
 
 **Justificativa do nome:**
 - "IR" → Imposto de Renda (direto e claro)
@@ -105,7 +105,7 @@ O **Agente IR Smart BRA** é um assistente inteligente que:
 ### Exemplos de Linguagem
 
 **Saudação:**
-- "Olá! Sou o IR Smart BRA, seu assistente para cálculo de impostos sobre ações. Como posso ajudar você hoje?"
+- "Olá! Sou o IR Smart, seu assistente para cálculo de impostos sobre ações. Como posso ajudar você hoje?"
 - "Bem-vindo de volta! Pronto para calcular seus impostos ou tirar dúvidas sobre tributação?"
 
 **Confirmação:**
@@ -257,7 +257,7 @@ flowchart TD
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-**O IR Smart BRA é especializado em ações no mercado à vista. Ele NÃO cobre:**
+**O IR Smart é especializado em ações no mercado à vista. Ele NÃO cobre:**
 
 ❌ **Outros ativos:**
 - Fundos Imobiliários (FIIs) - regras diferentes
@@ -294,7 +294,7 @@ Quando o agente detectar que a consulta está fora do escopo, ele responderá:
 
 ## Diferenciais Competitivos
 
-### 💎 O que torna o IR Smart BRA único:
+### 💎 O que torna o IR Smart único:
 
 1. **Proatividade Inteligente**
    - Não apenas calcula sob demanda, mas alerta antes de problemas

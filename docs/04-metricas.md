@@ -1,8 +1,8 @@
-# Avaliação e Métricas - IR Smart BRA
+# Avaliação e Métricas - IR Smart
 
 ## Como Avaliar o Agente
 
-A avaliação do IR Smart BRA combina **testes automatizados** (precisão técnica) e **feedback humano** (experiência do usuário):
+A avaliação do IR Smart combina **testes automatizados** (precisão técnica) e **feedback humano** (experiência do usuário):
 
 ### 1. Testes Estruturados Automatizados
 Suite de 50+ casos de teste com respostas esperadas conhecidas
@@ -362,7 +362,7 @@ def test_swing_trade_isento():
 
 ```
 ┌─────────────────────────────────────────────────┐
-│          IR Smart BRA - Dashboard                   │
+│          IR Smart - Dashboard                   │
 ├─────────────────────────────────────────────────┤
 │ Precisão de Cálculo:        100% ✅            │
 │ Taxa de Acerto (Questões):   97% ✅            │
@@ -383,7 +383,7 @@ def test_swing_trade_isento():
 
 ### Comparação com Soluções Existentes
 
-| Critério | IR Smart BRA | Calculadora B3 | App X | App Y |
+| Critério | IR Smart | Calculadora B3 | App X | App Y |
 |----------|----------|----------------|-------|-------|
 | Precisão | 100% | 100% | 95% | 98% |
 | Interface Conversacional | ✅ | ❌ | ✅ | ❌ |
@@ -393,7 +393,7 @@ def test_swing_trade_isento():
 | Geração DARF | ✅ | ❌ | ✅ | ✅ |
 | Custo | Grátis | Grátis | R$ 9,90/mês | R$ 4,90/mês |
 
-**Diferenciais do IR Smart BRA:**
+**Diferenciais do IR Smart:**
 1. Único com interface conversacional completa
 2. Explicações educativas em cada resposta
 3. Alertas proativos inteligentes

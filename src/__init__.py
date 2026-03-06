@@ -1,7 +1,7 @@
 """
-IR Smart BRA - Assistente Tributário Inteligente.
+IR Smart - Assistente Tributário Inteligente.
 
-Módulo principal do projeto IR Smart BRA para cálculo de
+Módulo principal do projeto IR Smart para cálculo de
 Imposto de Renda sobre operações com ações.
 
 Author: Gleison Mota
