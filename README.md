@@ -458,9 +458,9 @@ Contribuições são bem-vindas! Para contribuir:
 
 Para dúvidas ou sugestões sobre o projeto:
 
-- **GitHub:** [Criar issue](https://github.com/gleisontorres/dio-ir-smart-assistente-tributario-inteligente)
-- **E-mail:** [gleison.torres@outlook.com]
-- **LinkedIn:** [Seu perfil](www.linkedin.com/in/gleisontmota)
+- **GitHub:** [Repositório](https://github.com/gleisontorres/dio-ir-smart-assistente-tributario-inteligente)
+- **E-mail:** gleison.torres@outlook.com
+- **LinkedIn:** [Perfil LinkedIn](www.linkedin.com/in/gleisontmota)
 
 ---
 

@@ -1,6 +1,218 @@
-# Pitch - IR Smart BRA (3 minutos)
+# Pitch - IR Smart (3 minutos)
 
-## 🎯 Roteiro do Pitch
+---
+
+## 🎬 ROTEIRO DE DEMONSTRAÇÃO AO VIVO
+
+> **Objetivo:** Gravar demonstração prática do sistema funcionando
+> **Duração:** ~3 minutos
+
+---
+
+### CENA 1: Abertura - Visão Geral (30 segundos)
+
+**[Tela: Página inicial do IR Smart]**
+
+> 🎤 **Fala:**
+> 
+> "Olá! Vou apresentar o **IR Smart**, um assistente tributário inteligente para investidores de ações.
+>
+> Como podem ver, a interface é limpa e profissional. Na lateral temos o resumo do mês com total vendido, margem de isenção e prejuízos acumulados.
+>
+> E aqui no centro temos o chat onde o investidor conversa naturalmente com o assistente."
+
+**[Ação: Mostrar a sidebar e o chat vazio]**
+
+---
+
+### CENA 2: Registrando Operações (45 segundos)
+
+**[Tela: Clicar em "Registrar Operação"]**
+
+> 🎤 **Fala:**
+>
+> "Primeiro, vamos registrar algumas operações para simular um investidor real."
+
+**Operação 1 - Compra:**
+```
+Ticker: PETR4
+Tipo: COMPRA
+Quantidade: 200
+Preço: R$ 28,50
+Data: [data atual]
+Day Trade: Não
+```
+
+> 🎤 **Fala:**
+> 
+> "Registrei uma compra de 200 ações da Petrobras a R$ 28,50."
+
+**[Ação: Clicar em Registrar]**
+
+**Operação 2 - Venda com lucro:**
+```
+Ticker: PETR4
+Tipo: VENDA
+Quantidade: 100
+Preço: R$ 32,00
+Data: [data atual]
+Day Trade: Não
+```
+
+> 🎤 **Fala:**
+>
+> "Agora uma venda de 100 ações a R$ 32,00. Veja que o sistema já calcula automaticamente o resultado."
+
+**[Ação: Mostrar o cálculo que aparece após registrar]**
+
+> 🎤 **Fala:**
+>
+> "Olha só: lucro de R$ 350, operação swing trade, e como o total vendido está abaixo de R$ 20 mil, estou **ISENTO**!"
+
+---
+
+### CENA 3: Conversando com o Assistente (1 minuto)
+
+**[Tela: Voltar para o chat]**
+
+> 🎤 **Fala:**
+>
+> "Agora vem a parte mais legal: conversar com o assistente."
+
+**Pergunta 1 - Explicação simples:**
+```
+"Quanto posso vender ainda esse mês sem pagar imposto?"
+```
+
+**[Aguardar resposta e ler em voz alta o resumo]**
+
+> 🎤 **Fala:**
+>
+> "Vejam: ele calculou exatamente minha margem restante e explicou a regra de forma clara."
+
+**Pergunta 2 - Simulação:**
+```
+"Se eu vender as outras 100 ações de PETR4 por R$ 35, quanto vou pagar de IR?"
+```
+
+**[Aguardar resposta]**
+
+> 🎤 **Fala:**
+>
+> "Perfeito! Ele simulou o cenário, mostrou que continuo isento, e ainda me alertou sobre quanto sobra de margem."
+
+**Pergunta 3 - Dúvida conceitual:**
+```
+"Qual a diferença entre day trade e swing trade?"
+```
+
+**[Aguardar resposta]**
+
+> 🎤 **Fala:**
+>
+> "Além de calcular, ele também educa o investidor. Cada resposta é uma mini-aula sobre tributação."
+
+---
+
+### CENA 4: Alertas e Proatividade (30 segundos)
+
+**Pergunta 4 - Teste de limite:**
+```
+"E se eu vender R$ 25.000 em ações agora?"
+```
+
+**[Aguardar resposta com alerta]**
+
+> 🎤 **Fala:**
+>
+> "Olha o alerta! Ele identificou que eu perderia a isenção e sugeriu uma estratégia melhor: vender parte agora e o resto no próximo mês.
+>
+> Isso é proatividade - ele pensa junto com o investidor!"
+
+---
+
+### CENA 5: Fechamento (15 segundos)
+
+**[Tela: Mostrar a sidebar atualizada]**
+
+> 🎤 **Fala:**
+>
+> "Resumindo: o IR Smart calcula com precisão, explica de forma didática, e alerta antes de você errar.
+>
+> É um consultor tributário disponível 24 horas, gratuito, no seu bolso.
+>
+> Obrigado!"
+
+---
+
+## 📋 Checklist Pré-Gravação
+
+- [ ] Sistema rodando sem erros
+- [ ] Banco de dados limpo (zerado)
+- [ ] API OpenAI funcionando
+- [ ] Tela gravando em 1080p
+- [ ] Áudio testado
+- [ ] Roteiro impresso ou em segundo monitor
+
+---
+
+## 🎯 Perguntas Alternativas para o Chat
+
+Caso precise variar ou alguma resposta não saia como esperado:
+
+| Tipo | Pergunta |
+|------|----------|
+| Cálculo | "Vendi 50 ações de VALE3 por R$ 68. Comprei a R$ 60. Quanto pago?" |
+| Isenção | "Estou isento este mês?" |
+| Simulação | "Se eu vender mais R$ 10.000 hoje, perco a isenção?" |
+| Conceito | "Como funciona a compensação de prejuízos?" |
+| DARF | "Quando vence o DARF deste mês?" |
+| Alerta | "Já vendi R$ 19.000 este mês. O que acontece se vender mais R$ 5.000?" |
+
+---
+
+## 🔧 Dados para Demonstração
+
+### Operações sugeridas para registrar:
+
+| # | Tipo | Ticker | Qtd | Preço | Day Trade |
+|---|------|--------|-----|-------|-----------|
+| 1 | COMPRA | PETR4 | 200 | R$ 28,50 | Não |
+| 2 | VENDA | PETR4 | 100 | R$ 32,00 | Não |
+| 3 | COMPRA | VALE3 | 100 | R$ 62,00 | Não |
+
+### Cenários de conversa:
+
+1. **Margem de isenção** → Mostra cálculo automático
+2. **Simulação de venda** → Mostra proatividade
+3. **Conceito tributário** → Mostra educação
+4. **Limite ultrapassado** → Mostra alertas
+
+---
+
+## 🎥 Dicas de Gravação
+
+### Preparação:
+- Feche outras abas/apps
+- Desative notificações
+- Use modo escuro do sistema (combina com tema do app)
+- Teste o chat 2-3x antes de gravar
+
+### Durante:
+- Fale devagar e claro
+- Pause 1-2 segundos após cada ação
+- Aponte com o mouse para onde quer atenção
+- Se errar, continue - pode editar depois
+
+### Edição:
+- Corte silêncios longos
+- Acelere digitação (1.5x) se necessário
+- Adicione zoom em momentos importantes
+- Música de fundo suave (opcional)
+
+---
+
+## 🎬 ROTEIRO DO PITCH COMPLETO (Versão Original)
 
 ---
 
@@ -27,12 +239,12 @@
 
 ### 2. A Solução (1 minuto)
 
-**[Slide 3: Logo do IR Smart BRA + Tagline]**
+**[Slide 3: Logo do IR Smart + Tagline]**
 *"Seu consultor tributário inteligente, 24/7"*
 
 > 🎤 **Fala:**
 >
-> "É aqui que entra o **IR Smart BRA**.
+> "É aqui que entra o **IR Smart**.
 > 
 > Imagine ter um consultor tributário no seu bolso, disponível 24 horas, que:
 > 
@@ -44,7 +256,7 @@
 > ✅ **Simula cenários** antes de você vender ("Se eu vender agora, quanto vou pagar?")
 > ✅ **Gera a DARF** pronta para pagamento
 > 
-> Tudo isso através de uma **conversa natural**. Você não precisa entender de impostos, o IR Smart BRA traduz tudo para você.
+> Tudo isso através de uma **conversa natural**. Você não precisa entender de impostos, o IR Smart traduz tudo para você.
 > 
 > **[Slide 5: Arquitetura - IA + Código]**
 > 
@@ -67,9 +279,9 @@
 > 
 > **[Demonstração ao vivo ou vídeo]**
 > 
-> **Eu:** 'Oi IR Smart BRA, acabei de vender 100 ações da Petrobras por R$ 32. Comprei por R$ 30 há duas semanas. Quanto vou pagar de imposto?'
+> **Eu:** 'Oi IR Smart, acabei de vender 100 ações da Petrobras por R$ 32. Comprei por R$ 30 há duas semanas. Quanto vou pagar de imposto?'
 > 
-> **IR Smart BRA:** [Mostra resposta completa na tela]
+> **IR Smart:** [Mostra resposta completa na tela]
 > - Calcula lucro: R$ 200
 > - Identifica: Swing trade (15%)
 > - Verifica vendas do mês: R$ 3.200
@@ -80,7 +292,7 @@
 > 
 > **Eu:** 'E se eu vender mais R$ 25 mil agora?'
 > 
-> **IR Smart BRA:** [Alerta inteligente]
+> **IR Smart:** [Alerta inteligente]
 > ⚠️ 'Atenção! Isso ultrapassaria o limite. Você perderia a isenção e pagaria R$ 375 de IR. Sugestão: venda apenas R$ 16.800 agora e deixe o restante para o mês que vem.'
 > 
 > **[Destaque]**
@@ -94,7 +306,7 @@
 
 > 🎤 **Fala:**
 >
-> "Por que o IR Smart BRA é diferente de tudo que existe?
+> "Por que o IR Smart é diferente de tudo que existe?
 > 
 > **1. Único com IA conversacional** especializada em IR sobre ações
 > 
@@ -129,7 +341,7 @@
 > - Declaração de IR anual (tudo pré-preenchido)
 > - Planejamento tributário de longo prazo
 > 
-> **O IR Smart BRA não é só um chatbot. É o futuro do relacionamento financeiro inteligente.**"
+> **O IR Smart não é só um chatbot. É o futuro do relacionamento financeiro inteligente.**"
 
 ---
 
@@ -160,7 +372,7 @@
 ```
 ┌─────────────────────────────────────────┐
 │                                         │
-│       🎯 IR Smart BRA                       │
+│       🎯 IR Smart                       │
 │                                         │
 │   Seu consultor tributário              │
 │   inteligente, 24/7                     │
@@ -211,7 +423,7 @@
 ```
 [Screencast ou GIF animado mostrando:]
 1. Usuário faz pergunta
-2. IR Smart BRA calcula
+2. IR Smart calcula
 3. Exibe resultado formatado
 4. Dá dica proativa
 [Duração: 30-40 segundos]
@@ -222,7 +434,7 @@
 🏆 ÚNICOS NO MERCADO
 
 ┌────────────────┬──────────┬──────────┐
-│                │ Outros   │ IR Smart BRA │
+│                │ Outros   │ IR Smart │
 ├────────────────┼──────────┼──────────┤
 │ IA Conversa    │    ❌    │    ✅    │
 │ Educação       │ Limitado │    ✅    │
@@ -256,7 +468,7 @@ Zero barreiras → Democratização
 ```
 🚀 VISÃO DE FUTURO
 
-2025: IR Smart BRA lança
+2025: IR Smart lança
      ↓
 2026: Integração Home Broker
      ↓
@@ -336,9 +548,9 @@ Tem que ter um jeito melhor, né?"
 **[00:30-01:30] SOLUÇÃO**
 
 ```
-[Slide 3 - Logo IR Smart BRA]
+[Slide 3 - Logo IR Smart]
 
-"E TEM! Deixa eu apresentar o IR Smart BRA.
+"E TEM! Deixa eu apresentar o IR Smart.
 
 [Tom mais animado]
 
@@ -385,10 +597,10 @@ informação errada.
 
 [Inicia screenshare ou vídeo]
 
-[DIGITA] 'Oi IR Smart BRA, acabei de vender 100 ações da Petrobras por 32 reais. 
+[DIGITA] 'Oi IR Smart, acabei de vender 100 ações da Petrobras por 32 reais. 
 Comprei por 30 há duas semanas. Quanto vou pagar?'
 
-[MOSTRA resposta do IR Smart BRA]
+[MOSTRA resposta do IR Smart]
 
 Olha que legal! Ele:
 - Calculou meu lucro: 200 reais
@@ -449,7 +661,7 @@ com planejamento de longo prazo...
 
 [Olha direto para câmera, finalização forte]
 
-O IR Smart BRA não é só um chatbot.
+O IR Smart não é só um chatbot.
 
 É o futuro do relacionamento financeiro inteligente.
 

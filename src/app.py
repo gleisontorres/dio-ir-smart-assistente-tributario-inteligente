@@ -34,36 +34,40 @@ logger.add(
 )
 
 st.set_page_config(
-    page_title="IR Smart BRA - Bradesco",
-    page_icon="🌳",
+    page_title="IR Smart - Assistente Tributário",
+    page_icon="assets/logo.png",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-BRADESCO_RED = "#CC092F"
-BRADESCO_PINK = "#E91E63"
-BRADESCO_DARK = "#8B0620"
+PRIMARY_COLOR = "#10b981"
+PRIMARY_LIGHT = "#34d399"
+PRIMARY_DARK = "#059669"
+BG_DARK = "#0f172a"
+BG_CARD = "#1e293b"
+TEXT_PRIMARY = "#f1f5f9"
+TEXT_SECONDARY = "#94a3b8"
 
 CUSTOM_CSS = """
 <style>
-    /* ========== TEMA BRADESCO ========== */
+    /* ========== TEMA ESCURO PROFISSIONAL ========== */
     
-    /* Fundo principal com degradê sutil */
+    /* Fundo principal escuro */
     .stApp {
-        background: linear-gradient(135deg, #fff5f5 0%, #ffffff 50%, #fff0f5 100%);
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
     }
     
-    /* Texto geral da área principal - cor escura para legibilidade */
+    /* Texto geral da área principal */
     .main .stMarkdown p,
     .main .stMarkdown span,
     .main .stMarkdown li {
-        color: #1f2937 !important;
+        color: #e2e8f0 !important;
     }
     
     .main .stMarkdown h1,
     .main .stMarkdown h2,
     .main .stMarkdown h3 {
-        color: #CC092F !important;
+        color: #10b981 !important;
     }
     
     /* Labels de inputs */
@@ -74,7 +78,7 @@ CUSTOM_CSS = """
     .main .stDateInput label,
     .main .stCheckbox label,
     .main .stRadio label {
-        color: #374151 !important;
+        color: #cbd5e1 !important;
     }
     
     /* Labels dentro de formulários */
@@ -85,7 +89,7 @@ CUSTOM_CSS = """
     .stForm .stDateInput label,
     .stForm .stCheckbox label span,
     .stForm p {
-        color: #374151 !important;
+        color: #cbd5e1 !important;
     }
     
     /* Títulos na área principal */
@@ -98,14 +102,14 @@ CUSTOM_CSS = """
     section[data-testid="stMain"] h2,
     section[data-testid="stMain"] h3,
     section[data-testid="stMain"] h4 {
-        color: #CC092F !important;
+        color: #10b981 !important;
     }
     
     /* Expander header com texto visível */
     .streamlit-expanderHeader p,
     .streamlit-expanderHeader span,
     [data-testid="stExpander"] summary span {
-        color: #1f2937 !important;
+        color: #e2e8f0 !important;
     }
     
     /* Texto dentro de dataframes/tabelas */
@@ -113,65 +117,66 @@ CUSTOM_CSS = """
     .main table,
     .main th,
     .main td {
-        color: #1f2937 !important;
+        color: #e2e8f0 !important;
     }
     
     /* Caption e textos pequenos */
     .main .stCaption,
     .main small,
     .main figcaption {
-        color: #6b7280 !important;
+        color: #94a3b8 !important;
     }
     
-    /* Header com degradê Bradesco */
-    .bradesco-header {
-        background: linear-gradient(135deg, #CC092F 0%, #E91E63 50%, #CC092F 100%);
+    /* Header com degradê */
+    .app-header {
+        background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #1e293b 100%);
         padding: 20px;
         border-radius: 10px;
         margin-bottom: 20px;
+        border: 1px solid #334155;
     }
     
-    /* ========== SIDEBAR BRADESCO ========== */
+    /* ========== SIDEBAR ESCURA ========== */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #CC092F 0%, #E91E63 50%, #CC092F 100%) !important;
+        background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%) !important;
     }
     
     [data-testid="stSidebar"] > div:first-child {
-        background: linear-gradient(180deg, #CC092F 0%, #E91E63 50%, #CC092F 100%) !important;
+        background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%) !important;
     }
     
     [data-testid="stSidebar"] .stMarkdown {
-        color: white !important;
+        color: #e2e8f0 !important;
     }
     
     [data-testid="stSidebar"] h1, 
     [data-testid="stSidebar"] h2, 
     [data-testid="stSidebar"] h3 {
-        color: white !important;
+        color: #10b981 !important;
     }
     
     [data-testid="stSidebar"] p {
-        color: rgba(255,255,255,0.9) !important;
+        color: #cbd5e1 !important;
     }
     
     [data-testid="stSidebar"] .stMetric label {
-        color: rgba(255,255,255,0.8) !important;
+        color: #94a3b8 !important;
     }
     
     [data-testid="stSidebar"] .stMetric [data-testid="stMetricValue"] {
-        color: white !important;
+        color: #f1f5f9 !important;
     }
     
     [data-testid="stSidebar"] .stMetric [data-testid="stMetricDelta"] {
-        color: rgba(255,255,255,0.9) !important;
+        color: #10b981 !important;
     }
     
-    /* Alertas na Sidebar - texto branco */
+    /* Alertas na Sidebar */
     [data-testid="stSidebar"] .stSuccess,
     [data-testid="stSidebar"] .stError,
     [data-testid="stSidebar"] [data-testid="stAlert"] {
-        background-color: rgba(255,255,255,0.15) !important;
-        border: none !important;
+        background-color: rgba(30, 41, 59, 0.8) !important;
+        border: 1px solid #334155 !important;
     }
     
     [data-testid="stSidebar"] .stSuccess p,
@@ -180,21 +185,21 @@ CUSTOM_CSS = """
     [data-testid="stSidebar"] .stError span,
     [data-testid="stSidebar"] [data-testid="stAlert"] p,
     [data-testid="stSidebar"] [data-testid="stAlert"] span {
-        color: white !important;
+        color: #f1f5f9 !important;
         font-weight: bold !important;
     }
     
-    /* Caption na Sidebar - mais visível */
+    /* Caption na Sidebar */
     [data-testid="stSidebar"] .stCaption,
     [data-testid="stSidebar"] small,
     [data-testid="stSidebar"] [data-testid="stCaptionContainer"],
     [data-testid="stSidebar"] [data-testid="stCaptionContainer"] p,
     [data-testid="stSidebar"] [data-testid="stCaptionContainer"] span {
-        color: rgba(255,255,255,0.85) !important;
+        color: #94a3b8 !important;
         font-size: 0.9rem !important;
     }
     
-    /* ========== INPUTS - BORDA FINA CINZA PADRÃO ========== */
+    /* ========== INPUTS - TEMA ESCURO ========== */
     
     /* Remove bordas e sombras dos containers */
     .stTextInput > div,
@@ -211,60 +216,48 @@ CUSTOM_CSS = """
         background: transparent !important;
     }
     
-    /* Text Input - borda completa */
+    /* Text Input */
     .stTextInput input {
-        background-color: white !important;
-        border-top: 1px solid #ccc !important;
-        border-bottom: 1px solid #ccc !important;
-        border-left: 1px solid #ccc !important;
-        border-right: 1px solid #ccc !important;
-        border-radius: 6px !important;
-        color: #333 !important;
+        background-color: #1e293b !important;
+        border: 1px solid #334155 !important;
+        border-radius: 8px !important;
+        color: #f1f5f9 !important;
         outline: none !important;
         box-shadow: none !important;
     }
     
-    /* Number Input - borda completa */
+    /* Number Input */
     .stNumberInput input {
-        background-color: white !important;
-        border-top: 1px solid #ccc !important;
-        border-bottom: 1px solid #ccc !important;
-        border-left: 1px solid #ccc !important;
-        border-right: 1px solid #ccc !important;
-        border-radius: 6px !important;
-        color: #333 !important;
+        background-color: #1e293b !important;
+        border: 1px solid #334155 !important;
+        border-radius: 8px !important;
+        color: #f1f5f9 !important;
         outline: none !important;
         box-shadow: none !important;
     }
     
-    /* Date Input - borda completa */
+    /* Date Input */
     .stDateInput input {
-        background-color: white !important;
-        border-top: 1px solid #ccc !important;
-        border-bottom: 1px solid #ccc !important;
-        border-left: 1px solid #ccc !important;
-        border-right: 1px solid #ccc !important;
-        border-radius: 6px !important;
-        color: #333 !important;
+        background-color: #1e293b !important;
+        border: 1px solid #334155 !important;
+        border-radius: 8px !important;
+        color: #f1f5f9 !important;
         outline: none !important;
         box-shadow: none !important;
     }
     
-    /* Select Box - borda completa */
+    /* Select Box */
     .stSelectbox [data-baseweb="select"] {
-        background-color: white !important;
-        border-top: 1px solid #ccc !important;
-        border-bottom: 1px solid #ccc !important;
-        border-left: 1px solid #ccc !important;
-        border-right: 1px solid #ccc !important;
-        border-radius: 6px !important;
+        background-color: #1e293b !important;
+        border: 1px solid #334155 !important;
+        border-radius: 8px !important;
         outline: none !important;
         box-shadow: none !important;
     }
     
     .stSelectbox [data-baseweb="select"] > div {
-        background-color: white !important;
-        color: #333 !important;
+        background-color: #1e293b !important;
+        color: #f1f5f9 !important;
         border: none !important;
     }
     
@@ -273,77 +266,78 @@ CUSTOM_CSS = """
     .stNumberInput input:focus,
     .stDateInput input:focus,
     .stSelectbox [data-baseweb="select"]:focus-within {
-        border-color: #CC092F !important;
-        box-shadow: none !important;
+        border-color: #10b981 !important;
+        box-shadow: 0 0 0 1px #10b981 !important;
     }
     
     /* Botões + e - do Number Input */
     .stNumberInput button {
-        background: linear-gradient(135deg, #CC092F 0%, #E91E63 100%) !important;
+        background: linear-gradient(135deg, #10b981 0%, #34d399 100%) !important;
         color: white !important;
         border: none !important;
     }
     
     .stNumberInput button:hover {
-        background: linear-gradient(135deg, #E91E63 0%, #CC092F 100%) !important;
+        background: linear-gradient(135deg, #34d399 0%, #10b981 100%) !important;
     }
     
     /* Dropdown do Select */
     [data-baseweb="popover"] [data-baseweb="menu"],
     [data-baseweb="popover"] ul {
-        background-color: white !important;
+        background-color: #1e293b !important;
+        border: 1px solid #334155 !important;
     }
     
     [data-baseweb="popover"] li,
     [data-baseweb="popover"] [role="option"] {
-        color: #333 !important;
-        background-color: white !important;
+        color: #f1f5f9 !important;
+        background-color: #1e293b !important;
     }
     
     [data-baseweb="popover"] li:hover,
     [data-baseweb="popover"] [role="option"]:hover {
-        background-color: #fce4ec !important;
+        background-color: #334155 !important;
     }
     
     /* Checkbox */
     .stCheckbox label span,
     .stCheckbox span {
-        color: #374151 !important;
+        color: #cbd5e1 !important;
     }
     
     /* Chat Input */
     .stChatInput > div {
-        background-color: white !important;
-        border: 1px solid #e0e0e0 !important;
+        background-color: #1e293b !important;
+        border: 1px solid #334155 !important;
         border-radius: 25px !important;
     }
     
     .stChatInput > div:focus-within {
-        border-color: #CC092F !important;
-        box-shadow: 0 0 0 1px #CC092F !important;
+        border-color: #10b981 !important;
+        box-shadow: 0 0 0 1px #10b981 !important;
     }
     
     .stChatInput textarea,
     .stChatInput input {
-        background-color: white !important;
-        color: #333 !important;
+        background-color: #1e293b !important;
+        color: #f1f5f9 !important;
     }
     
     /* Inputs dentro de forms */
     .stForm input,
     .stForm textarea,
     .stForm select {
-        background-color: white !important;
-        color: #333 !important;
+        background-color: #1e293b !important;
+        color: #f1f5f9 !important;
     }
     
-    /* ========== BOTÕES BRADESCO ========== */
+    /* ========== BOTÕES ========== */
     .stButton > button,
     .stForm .stButton > button,
     button[kind="secondary"],
     button[kind="primary"],
     .stForm button {
-        background: linear-gradient(135deg, #CC092F 0%, #E91E63 100%) !important;
+        background: linear-gradient(135deg, #10b981 0%, #34d399 100%) !important;
         color: white !important;
         border: none !important;
         border-radius: 25px !important;
@@ -353,7 +347,7 @@ CUSTOM_CSS = """
         opacity: 1 !important;
     }
     
-    /* Texto dos botões SEMPRE branco */
+    /* Texto dos botões */
     .stButton > button span,
     .stButton > button p,
     .stButton > button div,
@@ -369,15 +363,15 @@ CUSTOM_CSS = """
     .stButton > button:hover,
     .stForm .stButton > button:hover,
     .stForm button:hover {
-        background: linear-gradient(135deg, #E91E63 0%, #CC092F 100%) !important;
+        background: linear-gradient(135deg, #34d399 0%, #10b981 100%) !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 4px 15px rgba(204, 9, 47, 0.4) !important;
+        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4) !important;
     }
     
     /* Botões do formulário específicos */
     [data-testid="stForm"] button,
     [data-testid="stFormSubmitButton"] button {
-        background: linear-gradient(135deg, #CC092F 0%, #E91E63 100%) !important;
+        background: linear-gradient(135deg, #10b981 0%, #34d399 100%) !important;
         color: white !important;
         border: none !important;
         opacity: 1 !important;
@@ -391,86 +385,92 @@ CUSTOM_CSS = """
     
     /* ========== ALERTAS ========== */
     .stSuccess {
-        background-color: rgba(255,255,255,0.9) !important;
-        border-left: 4px solid #10B981 !important;
+        background-color: rgba(16, 185, 129, 0.15) !important;
+        border-left: 4px solid #10b981 !important;
     }
     
     .stWarning {
-        background-color: rgba(255,255,255,0.9) !important;
-        border-left: 4px solid #F59E0B !important;
+        background-color: rgba(245, 158, 11, 0.15) !important;
+        border-left: 4px solid #f59e0b !important;
     }
     
     .stError {
-        background-color: rgba(255,255,255,0.9) !important;
-        border-left: 4px solid #CC092F !important;
+        background-color: rgba(239, 68, 68, 0.15) !important;
+        border-left: 4px solid #ef4444 !important;
+    }
+    
+    .stInfo {
+        background-color: rgba(59, 130, 246, 0.15) !important;
+        border-left: 4px solid #3b82f6 !important;
     }
     
     /* ========== CHAT MESSAGES ========== */
     [data-testid="stChatMessage"] {
-        background-color: white !important;
+        background-color: #1e293b !important;
         border-radius: 15px !important;
         padding: 15px !important;
         margin: 10px 0 !important;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2) !important;
+        border: 1px solid #334155 !important;
     }
     
-    /* Texto das mensagens do chat - GARANTIR VISIBILIDADE */
+    /* Texto das mensagens do chat */
     [data-testid="stChatMessage"] p,
     [data-testid="stChatMessage"] span,
     [data-testid="stChatMessage"] li,
     [data-testid="stChatMessage"] .stMarkdown,
     [data-testid="stChatMessage"] .stMarkdown p,
     [data-testid="stChatMessage"] .stMarkdown span {
-        color: #1f2937 !important;
+        color: #e2e8f0 !important;
     }
     
     [data-testid="stChatMessage"] strong,
     [data-testid="stChatMessage"] b {
-        color: #111827 !important;
+        color: #f1f5f9 !important;
     }
     
     [data-testid="stChatMessage"] h1,
     [data-testid="stChatMessage"] h2,
     [data-testid="stChatMessage"] h3,
     [data-testid="stChatMessage"] h4 {
-        color: #CC092F !important;
+        color: #10b981 !important;
     }
     
     /* Mensagem do assistente */
     [data-testid="stChatMessage"][data-testid*="assistant"] {
-        border-left: 4px solid #CC092F !important;
+        border-left: 4px solid #10b981 !important;
     }
     
     /* ========== PROGRESS BAR ========== */
     .stProgress > div > div > div {
-        background: linear-gradient(90deg, #CC092F 0%, #E91E63 100%) !important;
+        background: linear-gradient(90deg, #10b981 0%, #34d399 100%) !important;
     }
     
     /* ========== DIVIDERS ========== */
-    .bradesco-divider {
+    .app-divider {
         border: none;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #334155, transparent);
         margin: 15px 0;
     }
     
     /* ========== FORMS ========== */
     .stForm {
-        background-color: white !important;
+        background-color: #1e293b !important;
         padding: 20px !important;
         border-radius: 15px !important;
-        box-shadow: 0 4px 20px rgba(204, 9, 47, 0.1) !important;
-        border: 1px solid rgba(204, 9, 47, 0.2) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+        border: 1px solid #334155 !important;
     }
     
     /* ========== EXPANDER ========== */
     .streamlit-expanderHeader {
-        background-color: white !important;
-        border: 1px solid rgba(204, 9, 47, 0.2) !important;
+        background-color: #1e293b !important;
+        border: 1px solid #334155 !important;
         border-radius: 10px !important;
     }
     
-    /* Texto do expander visível - TODOS OS ESTADOS */
+    /* Texto do expander visível */
     [data-testid="stExpander"] summary,
     [data-testid="stExpander"] summary span,
     [data-testid="stExpander"] summary p,
@@ -487,14 +487,14 @@ CUSTOM_CSS = """
     .streamlit-expanderHeader p,
     .streamlit-expanderHeader:hover,
     .streamlit-expanderHeader:hover span {
-        color: #1f2937 !important;
-        background-color: white !important;
+        color: #e2e8f0 !important;
+        background-color: #1e293b !important;
     }
     
     /* Força cor do texto no expander header */
     [data-testid="stExpander"] [data-testid="stMarkdownContainer"],
     [data-testid="stExpander"] [data-testid="stMarkdownContainer"] * {
-        color: #1f2937 !important;
+        color: #e2e8f0 !important;
     }
     
     /* Conteúdo dentro do expander */
@@ -503,15 +503,15 @@ CUSTOM_CSS = """
     [data-testid="stExpander"] p,
     [data-testid="stExpander"] span,
     [data-testid="stExpander"] div {
-        color: #1f2937 !important;
+        color: #e2e8f0 !important;
     }
     
-    /* Info box texto visível */
+    /* Info/Alert box texto visível */
     .stAlert p,
     .stAlert span,
     [data-testid="stAlert"] p,
     [data-testid="stAlert"] span {
-        color: #1f2937 !important;
+        color: #e2e8f0 !important;
     }
 </style>
 """
@@ -549,10 +549,9 @@ def init_session_state():
 def render_sidebar():
     """Renderiza a barra lateral com informações e controles."""
     import base64
-    from pathlib import Path
     
     with st.sidebar:
-        logo_path = Path("assets/logo-horizontal-2x.png")
+        logo_path = Path("assets/logo.png")
         if logo_path.exists():
             logo_base64 = base64.b64encode(logo_path.read_bytes()).decode()
             st.markdown(f"""
@@ -563,13 +562,13 @@ def render_sidebar():
                     padding: 10px 0;
                     margin-bottom: 5px;
                 ">
-                    <img src="data:image/png;base64,{logo_base64}" width="40" height="40" 
-                         style="object-fit: contain; filter: brightness(0) invert(1);">
+                    <img src="data:image/png;base64,{logo_base64}" width="45" height="45" 
+                         style="object-fit: contain;">
                     <div>
-                        <p style="color: white; font-size: 1.3rem; font-weight: bold; margin: 0; line-height: 1.2;">
-                            IR Smart BRA
+                        <p style="font-size: 1.3rem; font-weight: bold; margin: 0; line-height: 1.2;">
+                            <span style="color: #ffffff;">IR</span> <span style="color: #10b981;">Smart</span>
                         </p>
-                        <p style="color: rgba(255,255,255,0.8); font-size: 0.75rem; margin: 0;">
+                        <p style="color: #94a3b8; font-size: 0.75rem; margin: 0;">
                             Assistente Tributário
                         </p>
                     </div>
@@ -577,12 +576,26 @@ def render_sidebar():
             """, unsafe_allow_html=True)
         else:
             st.markdown("""
-                <p style="color: white; font-size: 1.4rem; font-weight: bold; margin: 0;">
-                    🌳 IR Smart BRA
-                </p>
+                <div style="
+                    display: flex; 
+                    align-items: center; 
+                    gap: 12px; 
+                    padding: 10px 0;
+                    margin-bottom: 5px;
+                ">
+                    <span style="font-size: 2.2rem;">💹</span>
+                    <div>
+                        <p style="font-size: 1.3rem; font-weight: bold; margin: 0; line-height: 1.2;">
+                            <span style="color: #ffffff;">IR</span> <span style="color: #10b981;">Smart</span>
+                        </p>
+                        <p style="color: #94a3b8; font-size: 0.75rem; margin: 0;">
+                            Assistente Tributário
+                        </p>
+                    </div>
+                </div>
             """, unsafe_allow_html=True)
 
-        st.markdown('<div class="bradesco-divider"></div>', unsafe_allow_html=True)
+        st.markdown('<div class="app-divider"></div>', unsafe_allow_html=True)
 
         st.markdown("### 📊 Resumo do Mês")
         
@@ -656,10 +669,12 @@ def render_sidebar():
         st.caption(f"Sessão: {st.session_state.sessao_id}")
         st.caption(f"Data: {formatar_data(hoje)}")
         st.markdown("""
-            <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #333;">
-                <p style="color: #CC092F; font-size: 0.75rem; margin: 0;">IR Smart BRA v1.0.0</p>
-                <p style="color: #666; font-size: 0.7rem; margin: 0;">Bootcamp Bradesco GenAI</p>
-                <p style="color: #666; font-size: 0.7rem; margin: 0;">© 2026 Gleison Mota</p>
+            <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #334155;">
+                <p style="font-size: 0.75rem; margin: 0;">
+                    <span style="color: #ffffff;">IR</span> <span style="color: #10b981;">Smart</span> 
+                    <span style="color: #94a3b8;">v1.0.0</span>
+                </p>
+                <p style="color: #94a3b8; font-size: 0.7rem; margin: 0;">© 2026 Gleison Mota</p>
             </div>
         """, unsafe_allow_html=True)
 
@@ -910,27 +925,27 @@ def processar_mensagem(mensagem: str) -> str:
 def render_chat():
     """Renderiza a interface de chat."""
     import base64
-    from pathlib import Path
-
-    logo_path = Path("assets/logo-horizontal-2x.png")
+    
+    logo_path = Path("assets/logo.png")
     if logo_path.exists():
         logo_base64 = base64.b64encode(logo_path.read_bytes()).decode()
         st.markdown(f"""
             <div style="
-                background: linear-gradient(135deg, #CC092F 0%, #E91E63 50%, #CC092F 100%);
+                background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #1e293b 100%);
                 padding: 30px 20px;
                 border-radius: 15px;
                 margin-bottom: 25px;
-                box-shadow: 0 8px 30px rgba(204, 9, 47, 0.3);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+                border: 1px solid #334155;
             ">
                 <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-                    <img src="data:image/png;base64,{logo_base64}" width="70" height="70" 
-                         style="object-fit: contain; filter: brightness(0) invert(1);">
-                    <span style="color: white; font-size: 2.8rem; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
-                        IR Smart BRA
+                    <img src="data:image/png;base64,{logo_base64}" width="80" height="80" 
+                         style="object-fit: contain;">
+                    <span style="font-size: 2.8rem; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                        <span style="color: #ffffff;">IR</span> <span style="color: #10b981;">Smart</span>
                     </span>
                 </div>
-                <p style="color: rgba(255,255,255,0.95); font-size: 1.15rem; margin-top: 15px; text-align: center;">
+                <p style="color: #cbd5e1; font-size: 1.15rem; margin-top: 15px; text-align: center;">
                     Seu assistente inteligente para cálculo de Imposto de Renda sobre ações
                 </p>
             </div>
@@ -938,16 +953,20 @@ def render_chat():
     else:
         st.markdown("""
             <div style="
-                background: linear-gradient(135deg, #CC092F 0%, #E91E63 50%, #CC092F 100%);
+                background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #1e293b 100%);
                 padding: 30px 20px;
                 border-radius: 15px;
                 margin-bottom: 25px;
-                box-shadow: 0 8px 30px rgba(204, 9, 47, 0.3);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+                border: 1px solid #334155;
             ">
-                <p style="color: white; font-size: 2.8rem; font-weight: bold; text-align: center; margin: 0;">
-                    🌳 IR Smart BRA
-                </p>
-                <p style="color: rgba(255,255,255,0.95); font-size: 1.15rem; margin-top: 15px; text-align: center;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+                    <span style="font-size: 3.5rem;">💹</span>
+                    <span style="font-size: 2.8rem; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                        <span style="color: #ffffff;">IR</span> <span style="color: #10b981;">Smart</span>
+                    </span>
+                </div>
+                <p style="color: #cbd5e1; font-size: 1.15rem; margin-top: 15px; text-align: center;">
                     Seu assistente inteligente para cálculo de Imposto de Renda sobre ações
                 </p>
             </div>
@@ -957,7 +976,7 @@ def render_chat():
         st.session_state.messages.append({
             "role": "assistant",
             "content": (
-                "Olá! 👋 Sou o **IR Smart BRA**, seu assistente Bradesco para cálculo de impostos sobre ações.\n\n"
+                "Olá! 👋 Sou o **IR Smart**, seu assistente inteligente para cálculo de impostos sobre ações.\n\n"
                 "Posso te ajudar com:\n"
                 "- 📊 **Cálculo de IR** sobre vendas de ações\n"
                 "- 💰 **Verificação de isenção** mensal (R$ 20.000)\n"
