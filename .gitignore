@@ -70,23 +70,35 @@ venv.bak/
 .DS_Store
 Thumbs.db
 
-# Project specific
+# ========================================
+# PROJECT SPECIFIC
+# ========================================
+
+# Database (dados de teste/desenvolvimento)
 *.db
 *.sqlite
 *.sqlite3
 database/*.db
 
-# PDF gerados
-*.pdf
-darf_*.pdf
-
 # Logs
 *.log
 logs/
+
+# PDFs gerados
+*.pdf
+darf_*.pdf
 
 # Secrets
 secrets/
 .secrets/
 
+# Assets antigos/temporários
+assets/logo-horizontal-2x.png
+
 # Jupyter Notebooks checkpoints
 .ipynb_checkpoints/
+
+# Cursor IDE
+.cursor/
+
+05-pitch.md

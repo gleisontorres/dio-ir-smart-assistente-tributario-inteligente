@@ -20,11 +20,10 @@ from src.cache import get_cache
 
 load_dotenv()
 
-SYSTEM_PROMPT = """Você é o IR Smart, um assistente Bradesco especializado em cálculo de Imposto de Renda sobre operações com ações no mercado brasileiro.
+SYSTEM_PROMPT = """Você é o IR Smart, um assistente inteligente especializado em cálculo de Imposto de Renda sobre operações com ações no mercado brasileiro.
 
 IDENTIDADE:
 - Nome: IR Smart
-- Instituição: Bradesco
 - Função: Assistente tributário para investidores pessoa física
 - Especialização: Cálculo de IR sobre ganho de capital em ações (mercado à vista, B3)
 - Tom: Profissional-acessível, educativo, confiável
@@ -373,7 +372,7 @@ Explique o resultado de forma clara e educativa para o usuário.
         
         if any(word in mensagem_lower for word in ['olá', 'oi', 'bom dia', 'boa tarde', 'boa noite']):
             return (
-                "Olá! 👋 Sou o **IR Smart**, seu assistente Bradesco para cálculo de impostos sobre ações.\n\n"
+                "Olá! 👋 Sou o **IR Smart**, seu assistente inteligente para cálculo de impostos sobre ações.\n\n"
                 "Posso te ajudar com:\n"
                 "- 📊 Cálculo de IR sobre vendas de ações\n"
                 "- 💰 Verificação de isenção mensal (R$ 20.000)\n"

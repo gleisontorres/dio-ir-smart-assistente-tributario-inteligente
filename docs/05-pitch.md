@@ -1,11 +1,289 @@
-# Pitch - IR Smart (3 minutos)
+# Pitch - IR Smart
 
 ---
 
-## 🎬 ROTEIRO DE DEMONSTRAÇÃO AO VIVO
+## 🔥 ROTEIRO LINKEDIN (2-3 minutos)
 
-> **Objetivo:** Gravar demonstração prática do sistema funcionando
-> **Duração:** ~3 minutos
+> **Formato:** Vídeo quadrado (1:1) ou vertical (9:16)  
+> **Legendas:** OBRIGATÓRIAS (85% assiste sem som)  
+> **Objetivo:** Demonstrar o projeto + gerar engajamento
+
+---
+
+### 🎬 ESTRUTURA DO VÍDEO
+
+```
+[0:00-0:05]  HOOK - Frase impactante (texto na tela)
+[0:05-0:20]  PROBLEMA - Por que isso importa
+[0:20-0:40]  ARQUITETURA - Como funciona (visual)
+[0:40-1:40]  DEMO - Sistema funcionando
+[1:40-2:00]  FECHAMENTO - Resultado + CTA
+```
+
+---
+
+### 📍 CENA 1: HOOK (0-5 segundos)
+
+**[Tela: Você olhando para câmera OU texto grande animado]**
+
+> 🎤 **Fala (escolha uma):**
+>
+> **Opção A:** "60% dos investidores brasileiros erram no cálculo do IR sobre ações."
+>
+> **Opção B:** "Criei uma IA que calcula seu imposto sobre ações em segundos."
+>
+> **Opção C:** "Você sabe quanto pode vender de ações sem pagar imposto?"
+
+**💡 Dica:** Coloque essa frase como TEXTO GRANDE na tela também (para quem assiste sem som).
+
+---
+
+### 📍 CENA 2: O PROBLEMA (5-20 segundos)
+
+**[Tela: Você falando para câmera]**
+
+> 🎤 **Fala:**
+>
+> "Se você investe em ações, já deve ter se perguntado:
+> 
+> - Quanto posso vender sem pagar imposto?
+> - Como compensar prejuízos?
+> - Quando vence a DARF?
+>
+> As regras são confusas, e errar pode custar caro.
+>
+> Por isso criei o **IR Smart**."
+
+---
+
+### 📍 CENA 3: ARQUITETURA (20-40 segundos)
+
+**[Tela: Imagem do diagrama de arquitetura]**
+
+> 🎤 **Fala:**
+>
+> "O IR Smart combina duas coisas:
+>
+> **GPT-4** para entender suas perguntas em linguagem natural...
+>
+> ...e um **motor de cálculo em Python** que garante 100% de precisão nos números.
+>
+> O resultado? Um assistente que conversa como humano, mas calcula como máquina."
+
+**💡 Sugestão visual:** Mostrar o diagrama simplificado:
+
+```
+┌─────────────┐     ┌─────────────┐
+│   GPT-4     │ ←→  │   Python    │
+│ (conversa)  │     │ (cálculos)  │
+└─────────────┘     └─────────────┘
+        ↓
+┌─────────────────────────┐
+│  Resposta Confiável ✅   │
+└─────────────────────────┘
+```
+
+---
+
+### 📍 CENA 4: DEMONSTRAÇÃO (40s - 1min40)
+
+**[Tela: Compartilhamento de tela do IR Smart]**
+
+#### Parte A - Registrar Operações (20 segundos)
+
+> 🎤 **Fala:**
+>
+> "Deixa eu mostrar funcionando. Vou simular um investidor."
+
+**[Ação: Clicar em "Registrar Operação"]**
+
+**Registrar COMPRA:**
+```
+Ticker: PETR4
+Tipo: COMPRA  
+Quantidade: 200
+Preço: R$ 28,50
+```
+
+> 🎤 **Fala:** "Comprei 200 ações de Petrobras."
+
+**[Clicar Registrar → Voltar]**
+
+**Registrar VENDA:**
+```
+Ticker: PETR4
+Tipo: VENDA
+Quantidade: 100
+Preço: R$ 32,00
+```
+
+> 🎤 **Fala:**
+>
+> "Agora vendi 100 ações com lucro. Olha o que aparece..."
+>
+> "Lucro de R$ 350, swing trade, e o melhor: **ISENTO**! Porque minhas vendas estão abaixo de R$ 20 mil no mês."
+
+---
+
+#### Parte B - Chat com o Assistente (40 segundos)
+
+**[Ação: Voltar para o chat]**
+
+> 🎤 **Fala:** "Agora a parte mais legal: conversar com ele."
+
+**Pergunta 1:**
+```
+Quanto posso vender ainda esse mês sem pagar imposto?
+```
+
+**[Aguardar resposta]**
+
+> 🎤 **Fala:** "Olha: ele sabe exatamente minha situação e calcula a margem."
+
+---
+
+**Pergunta 2:**
+```
+Qual a diferença entre day trade e swing trade?
+```
+
+**[Aguardar resposta]**
+
+> 🎤 **Fala:** "Além de calcular, ele também educa. Cada resposta é uma mini-aula."
+
+---
+
+**Pergunta 3 (ALERTA):**
+```
+E se eu vender R$ 25.000 em ações agora?
+```
+
+**[Aguardar resposta com alerta]**
+
+> 🎤 **Fala:**
+>
+> "Esse é o diferencial: ele me ALERTA antes de eu errar!
+> 
+> Sugeriu vender só uma parte agora e deixar o resto pro mês que vem.
+> 
+> Isso é proatividade."
+
+---
+
+### 📍 CENA 5: FECHAMENTO + CTA (1min40 - 2min)
+
+**[Tela: Você olhando para câmera]**
+
+> 🎤 **Fala:**
+>
+> "Resumindo: o IR Smart é um assistente que calcula com precisão, explica de forma simples, e te avisa ANTES de você errar.
+>
+> Desenvolvi isso no Bootcamp da DIO, usando Python, Streamlit e GPT-4.
+>
+> Se você investe em ações e já se perdeu com IR, comenta aqui embaixo.
+>
+> E se esse conteúdo foi útil, me segue para mais projetos de IA aplicada."
+
+---
+
+## 📝 TEXTO PARA O POST DO LINKEDIN
+
+```
+🤖 Criei uma IA que calcula Imposto de Renda sobre ações
+
+60% dos investidores brasileiros não sabem calcular corretamente o IR sobre suas operações.
+
+Isso gera:
+❌ Multas por erro no cálculo
+❌ Dinheiro perdido por não aproveitar isenções
+❌ Medo de investir
+
+Por isso desenvolvi o IR Smart - um assistente tributário inteligente que:
+
+✅ Calcula IR automaticamente (100% preciso)
+✅ Explica as regras de forma simples
+✅ Alerta ANTES de você perder isenções
+✅ Simula cenários ("Se eu vender X, quanto pago?")
+
+A arquitetura combina:
+🧠 GPT-4 para conversação natural
+🔢 Python para cálculos precisos
+🛡️ 6 camadas de validação anti-alucinação
+
+Assista a demo completa no vídeo 👆
+
+Projeto desenvolvido no Bootcamp Python + IA da @DIO
+
+---
+
+💬 Você investe em ações? Já teve dificuldade com IR?
+Comenta aqui embaixo!
+
+#Python #IA #InteligenciaArtificial #MachineLearning #OpenAI #GPT4 #Streamlit #Fintech #InvestimentosInvestidor #ImpostoDeRenda #Inovação #Tecnologia #Desenvolvimento #DIO
+```
+
+---
+
+## ✅ CHECKLIST PRÉ-GRAVAÇÃO LINKEDIN
+
+**Técnico:**
+- [ ] Testar sistema 3x antes de gravar
+- [ ] Banco de dados limpo (sem operações antigas)
+- [ ] API OpenAI funcionando
+- [ ] Tela em 1080p ou superior
+- [ ] Áudio testado (microfone lapela ou fone)
+- [ ] Iluminação frontal (ring light)
+- [ ] Fundo limpo ou desfocado
+
+**Conteúdo:**
+- [ ] Roteiro impresso ou em segundo monitor
+- [ ] Ensaiar 2-3x cronometrando
+- [ ] Perguntas do chat pré-digitadas (copia e cola)
+
+**Pós-produção:**
+- [ ] Adicionar legendas (CapCut gera automático)
+- [ ] Cortar pausas longas
+- [ ] Adicionar texto nos momentos-chave
+- [ ] Música de fundo suave (opcional)
+- [ ] Exportar 1:1 ou 9:16
+
+---
+
+## 🎯 PERGUNTAS PRÉ-DIGITADAS (copiar/colar)
+
+```
+Quanto posso vender ainda esse mês sem pagar imposto?
+```
+
+```
+Qual a diferença entre day trade e swing trade?
+```
+
+```
+E se eu vender R$ 25.000 em ações agora?
+```
+
+**Alternativas caso precise:**
+```
+Como funciona a compensação de prejuízos?
+```
+
+```
+Quando vence a DARF deste mês?
+```
+
+```
+Se eu vender as outras 100 ações de PETR4 por R$ 35, quanto vou pagar de IR?
+```
+
+---
+
+---
+
+## 🎬 ROTEIRO ESTENDIDO (5 minutos - versão completa)
+
+> **Use esta versão para:** apresentações técnicas, bootcamp, entrevistas
+> **Duração:** ~5 minutos
 
 ---
 
