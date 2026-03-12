@@ -301,46 +301,6 @@ def test_swing_trade_com_isencao():
 
 ---
 
-## 🎬 Demonstração
-
-### Cenário 1: Cálculo Simples
-
-**Usuário:** "Vendi 100 ações da PETR4 por R$ 32,00. Comprei por R$ 30,00 há 2 semanas."
-
-**IR Smart:**
-```
-💰 Resumo da Operação:
-- Lucro: R$ 200,00
-- Tipo: Swing Trade (15%)
-- Total vendido no mês: R$ 3.200,00
-
-🎯 Status: ISENTO ✅
-Você não precisa pagar IR! Suas vendas estão abaixo de R$ 20.000/mês.
-
-💡 Margem restante: R$ 16.800,00 para manter isenção.
-```
-
-### Cenário 2: Alerta Proativo
-
-**Usuário:** "Já vendi R$ 18.000 este mês. Se eu vender mais R$ 5.000, o que acontece?"
-
-**IR Smart:**
-```
-⚠️ ALERTA IMPORTANTE!
-
-Se você vender R$ 5.000:
-- Total do mês: R$ 23.000,00
-- Status: TRIBUTÁVEL (ultrapassou R$ 20.000)
-- Você perde a isenção sobre TODO o lucro do mês
-
-💡 SUGESTÃO:
-Venda apenas R$ 2.000,00 agora (mantém isenção)
-Deixe R$ 3.000,00 para o próximo mês
-Economia: ~R$ 150,00 de IR
-```
-
----
-
 ## 🚀 Roadmap Futuro
 
 ### Versão 2.0 (Q2 2025)
