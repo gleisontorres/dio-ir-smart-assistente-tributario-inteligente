@@ -17,7 +17,7 @@ Este projeto representa a evolução de assistentes virtuais no setor financeiro
 - ✅ **Cocriar soluções** - Simulações e planejamento tributário colaborativo
 - ✅ **Garantir segurança** - 6 camadas de anti-alucinação para informações precisas
 
----
+Este projeto representa a evolução de assistentes virtuais no setor financeiro, transformando chatbots reativos em **agentes inteligentes e proativos**. O IR Smart utiliza IA Generativa para:
 
 ## 🎯 O Problema
 
@@ -271,7 +271,9 @@ def test_swing_trade_com_isencao():
 **Precisão:** 100% de acerto nos cálculos  
 **Benchmark:** Validado contra calculadora oficial da B3
 
----
+```bash
+pip install -r requirements.txt
+```
 
 ## 🔒 Segurança e Anti-Alucinação
 
