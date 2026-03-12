@@ -17,7 +17,7 @@ Este projeto representa a evolução de assistentes virtuais no setor financeiro
 - ✅ **Cocriar soluções** - Simulações e planejamento tributário colaborativo
 - ✅ **Garantir segurança** - 6 camadas de anti-alucinação para informações precisas
 
----
+Este projeto representa a evolução de assistentes virtuais no setor financeiro, transformando chatbots reativos em **agentes inteligentes e proativos**. O IR Smart utiliza IA Generativa para:
 
 ## 🎯 O Problema
 
@@ -271,7 +271,9 @@ def test_swing_trade_com_isencao():
 **Precisão:** 100% de acerto nos cálculos  
 **Benchmark:** Validado contra calculadora oficial da B3
 
----
+```bash
+pip install -r requirements.txt
+```
 
 ## 🔒 Segurança e Anti-Alucinação
 
@@ -298,46 +300,6 @@ def test_swing_trade_com_isencao():
 | Tempo de Resposta | ≤3s | ✅ 2.1s |
 | Taxa de Erro | <0.1% | ✅ 0.05% |
 | Cobertura de Testes | ≥95% | ✅ 98% |
-
----
-
-## 🎬 Demonstração
-
-### Cenário 1: Cálculo Simples
-
-**Usuário:** "Vendi 100 ações da PETR4 por R$ 32,00. Comprei por R$ 30,00 há 2 semanas."
-
-**IR Smart:**
-```
-💰 Resumo da Operação:
-- Lucro: R$ 200,00
-- Tipo: Swing Trade (15%)
-- Total vendido no mês: R$ 3.200,00
-
-🎯 Status: ISENTO ✅
-Você não precisa pagar IR! Suas vendas estão abaixo de R$ 20.000/mês.
-
-💡 Margem restante: R$ 16.800,00 para manter isenção.
-```
-
-### Cenário 2: Alerta Proativo
-
-**Usuário:** "Já vendi R$ 18.000 este mês. Se eu vender mais R$ 5.000, o que acontece?"
-
-**IR Smart:**
-```
-⚠️ ALERTA IMPORTANTE!
-
-Se você vender R$ 5.000:
-- Total do mês: R$ 23.000,00
-- Status: TRIBUTÁVEL (ultrapassou R$ 20.000)
-- Você perde a isenção sobre TODO o lucro do mês
-
-💡 SUGESTÃO:
-Venda apenas R$ 2.000,00 agora (mantém isenção)
-Deixe R$ 3.000,00 para o próximo mês
-Economia: ~R$ 150,00 de IR
-```
 
 ---
 
